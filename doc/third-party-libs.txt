@@ -1,0 +1,17 @@
+#
+Avatar movement models 
+http://en.wikipedia.org/wiki/Mobility_model
+
+
+#
+Full opensource HLA RTI library
+RTI : runtime infrastructure
+HLA : high level abstraction
+
+With this library we will be able to create federated simulation without 
+handling low level operations. More information about this topic can be 
+found in below wikipedia page.
+http://en.wikipedia.org/wiki/Run-Time_Infrastructure_%28simulation%29
+
+Project home page
+http://porticoproject.org/index.php?title=Main_Page
