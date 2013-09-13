@@ -1,0 +1,25 @@
+In this meeting we covered below topics.
+
+Attendance
+---------------------------------------------
+All member groups are attended to meeting.
+
+
+Covered topics
+---------------------------------------------
+- Project specification
+- Programming language 
+- Version control system, git, github
+
+
+Important notes
+---------------------------------------------
+- We should learn about portico library
+- We should create simple examples with library
+
+- We should refresh our C++ knowledge 
+
+- We have to determine the objects, interfaces and methods of objects
+
+- We can implement simple domain specific language in order to configure the 
+  simulation execution
