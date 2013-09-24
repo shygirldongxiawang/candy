@@ -1,4 +1,6 @@
 *.class
+*.*swap
+*.*~
 
 # Package Files #
 *.jar
@@ -7,3 +9,5 @@
 
 logs/
 apps/
+
+
