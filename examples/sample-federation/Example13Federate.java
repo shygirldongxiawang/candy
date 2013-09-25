@@ -12,7 +12,7 @@
  *   (that goes for your lawyer as well)
  *
  */
-package hla13;
+package sample1;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -165,7 +165,7 @@ public class Example13Federate
 	 * the federate. For a description of the basic flow of this federate, see the
 	 * class level comments
 	 */
-	public void runFederate( String federateName, String federationName ) throws RTIexception
+    public void runFederate(String federateName, String federationName, String fomfilePath) throws RTIexception
 	{
 		/////////////////////////////////
 		// 1. create the RTIambassador //
@@ -180,7 +180,7 @@ public class Example13Federate
 		//       in that case, we'll just try and join it
 		try
 		{
-			File fom = new File( "testfom.fed" );
+            File fom = new File(fomfilePath);
 			rtiamb.createFederationExecution( federationName,
 			                                  fom.toURI().toURL() );
 			log( "Created Federation" );
@@ -548,29 +548,29 @@ public class Example13Federate
 	//----------------------------------------------------------
 	//                     STATIC METHODS
 	//----------------------------------------------------------
-	public static void main( String[] args )
-	{
-		// get a federate name, use "exampleFederate" as default
-		String federateName = "exampleFederate";
-		String federationName = "ExampleFederate";
-		if( args.length != 0 )
-		{
-			federateName = args[0];
-		}
-		if( args.length != 1 )
-		{
-			federationName = args[1];
-		}
-		
-		try
-		{
-			// run the example federate
-			new Example13Federate().runFederate( federateName, federationName );
-		}
-		catch( RTIexception rtie )
-		{
-			// an exception occurred, just log the information and exit
-			rtie.printStackTrace();
-		}
-	}
+//	public static void main( String[] args )
+//	{
+//		// get a federate name, use "exampleFederate" as default
+//		String federateName = "exampleFederate";
+//		String federationName = "ExampleFederate";
+//		if( args.length != 0 )
+//		{
+//			federateName = args[0];
+//		}
+//		if( args.length != 1 )
+//		{
+//			federationName = args[1];
+//		}
+//		
+//		try
+//		{
+//			// run the example federate
+//			new Example13Federate().runFederate( federateName, federationName );
+//		}
+//		catch( RTIexception rtie )
+//		{
+//			// an exception occurred, just log the information and exit
+//			rtie.printStackTrace();
+//		}
+//	}
 }
