@@ -14,37 +14,27 @@
     (class ObjectRoot 
       (attribute privilegeToDelete reliable timestamp)
       (class RTIprivate)
-      (class A
-        (attribute aa reliable timestamp TestSpace) ;; more comments!
-        (attribute ab reliable timestamp TestSpace)
-        (attribute ac reliable timestamp TestSpace)
-        (class B
-	        (attribute ba reliable timestamp TestSpace)
-	        (attribute bb reliable timestamp TestSpace)
-	        (attribute bc reliable timestamp TestSpace)
-        )
-      )
     )
   )
   (interactions 
     (class InteractionRoot reliable timestamp
       (class RTIprivate reliable timestamp)
-      (class X reliable timestamp TestSpace
-        (parameter xa)
-        (parameter xb)
-        (parameter xc)
-        (class Y reliable timestamp ;; note the absence of any space definition
-          (parameter ya)
-          (parameter yb)
-          (parameter yc)
-          (class Z reliable timestamp TestSpace
-            (parameter za)
-            (parameter zb)
-            (parameter zc)
+      ;;
+      ;; Player interactions
+      (class Player reliable timestamp TestSpace
+          (class Init reliable timestamp TestSpace
+            (parameter query)
+          )
+          (class Move reliable timestamp TestSpace
+            (parameter query)
+          )
+          (class StatusUpdate reliable timestamp TestSpace
+            (parameter query)
           )
         )
+      ;;
+      ;;
       )
     )
   )
-)
 

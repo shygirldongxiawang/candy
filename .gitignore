@@ -10,4 +10,20 @@
 logs/
 apps/
 
+bin/
+build/
+private/
+dist/
 
+/examples/sample1-learning-basics/LearningBasics/nbproject/private/
+/examples/basics/Sample1/nbproject/private/
+/examples/basics/Sample1/build/
+/examples/basics/Sample1/dist/
+/examples/basics/Sample2/nbproject/private/
+/examples/basics/Sample-Map/nbproject/private/
+/examples/basics/Sample-GameMap/nbproject/private/
+/examples/basics/AnagramGame/nbproject/private/
+/examples/basics/AnagramGame/build/
+/examples/basics/Ex1-Echo/nbproject/private/
+/examples/basics/Ex1-Echo/build/
+/examples/basics/Ex1-Echo/dist/
