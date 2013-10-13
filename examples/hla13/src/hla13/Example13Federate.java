@@ -92,7 +92,7 @@ public class Example13Federate
 	//                    STATIC VARIABLES
 	//----------------------------------------------------------
 	/** The number of times we will update our attributes and send an interaction */
-	public static final int ITERATIONS = 20;
+	public static final int ITERATIONS = 2000;
 
 	/** The sync point all federates will sync up on before starting */
 	public static String READY_TO_RUN = "ReadyToRun";
@@ -265,18 +265,31 @@ public class Example13Federate
 		// here is where we do the meat of our work. in each iteration, we will
 		// update the attribute values of the object we registered, and will
 		// send an interaction.
-		for( int i = 0; i < ITERATIONS; i++ )
-		{
-			// 9.1 update the attribute values of the instance //
-			updateAttributeValues( objectHandle );
-			
-			// 9.2 send an interaction
-			sendInteraction();
-			
-			// 9.3 request a time advance and wait until we get it
-			advanceTime( 1.0 );
-			log( "Time Advanced to " + fedamb.federateTime );
-		}
+	
+        if(federateName.equals("fed1") == true ) {
+            log("this federate is sender");
+            for( int i = 0; i < ITERATIONS; i++ )
+            {
+                // log("9.1 update the attribute values of the instance ");
+                // 9.1 update the attribute values of the instance //
+                updateAttributeValues( objectHandle );
+                
+                // log("9.2 send an interaction");
+                // 9.2 send an interaction
+                sendInteraction();
+                
+                // log("9.3 request a time advance and wait until we get it");
+                // 9.3 request a time advance and wait until we get it
+                advanceTime( 1.0 );
+                log( "Time Advanced to " + fedamb.federateTime + " // object update + interaction is sent");
+            }
+        }
+        else {
+            log("this federate is receiver and waiting for ever");
+            while(true)
+                advanceTime( 1.0 );
+        }
+
 
 		//////////////////////////////////////
 		// 10. delete the object we created //
