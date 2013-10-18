@@ -1,0 +1,4 @@
+logs/
+bin/
+*.class
+*.jar
