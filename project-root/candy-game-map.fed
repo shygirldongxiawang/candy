@@ -39,5 +39,13 @@
       )
     )
   )
-)
- 
+  (interactions 
+    (class InteractionRoot reliable timestamp
+      (class RTIprivate reliable timestamp)
+      (class PlayerUpdate reliable timestamp TestSpace
+        (parameter candyAmount)
+        (parameter objectHandle)
+      )
+    )
+  )
+) 
